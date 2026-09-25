@@ -3,3 +3,64 @@
 .region-map{position:relative;height:390px;border-radius:22px;overflow:hidden;background:linear-gradient(145deg,#173c47,#0d2932)}.region-land{position:absolute;inset:35px 30px;background:#eadfc9;border-radius:46% 54% 42% 58%/52% 42% 58% 48%;transform:rotate(-3deg);opacity:.98}.region-road{position:absolute;height:2px;background:#c99362;transform-origin:left center;opacity:.7}.place-pin{position:absolute;z-index:3;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;text-align:center;color:#10212a}.place-pin i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;border:4px solid #126b82;font-style:normal;font-size:13px;box-shadow:0 5px 14px rgba(0,0,0,.15);margin:auto}.place-pin.hotel i{border-color:#10212a}.place-pin.food i{border-color:#c84d3b}.place-pin b{display:block;margin-top:5px;font-size:11px;background:rgba(251,248,241,.9);padding:3px 6px;border-radius:6px;white-space:nowrap}.locator{position:absolute;right:14px;bottom:14px;z-index:4;background:#10212a;color:#fff;border-radius:12px;padding:10px 12px;font-size:9px;letter-spacing:.08em}.locator b{color:#f4c28d}.map-tip{position:absolute;left:14px;bottom:14px;z-index:4;background:rgba(255,255,255,.92);color:#10212a;border-radius:10px;padding:8px 10px;font-size:10px}.day-map-card .region-map{margin-top:16px}
 .mobile-nav{display:none}
 @media(max-width:760px){.souvenir-grid,.quick-grid{grid-template-columns:1fr 1fr}.tool-list summary{grid-template-columns:28px 1fr}.tool-list summary em{grid-column:2}.tool-list details>div{padding-left:20px}.region-map{height:330px}.mobile-nav{position:fixed;z-index:15;display:flex;left:12px;right:12px;bottom:12px;background:rgba(16,33,42,.94);backdrop-filter:blur(12px);border-radius:18px;padding:7px;justify-content:space-around;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,.2)}.mobile-nav a{font-size:10px;text-align:center;padding:6px 8px}.mobile-nav b{display:block;font-size:16px;margin-bottom:2px}body{padding-bottom:72px}}
+
+/* v4.1 — mobile-first polish + print/PDF parity */
+@media (max-width:760px){
+  .hero{min-height:72svh}
+  .hero-inner{margin-top:7vh}
+  .hero h1{font-size:clamp(62px,22vw,100px);line-height:.76;margin:26px 0 22px}
+  .lead{font-size:17px;line-height:1.5}
+  .hero-meta{gap:7px;margin:20px 0}.hero-meta span{font-size:10px;padding:7px 10px}
+  .hero-actions .primary,.hero-actions .ghost{padding:11px 14px;font-size:12px}
+  .intro h2,.route h2,.days>h2,.guide h2,.souvenirs h2,.turkish h2{font-size:38px;line-height:1.08}
+  .fact-grid{grid-template-columns:1fr 1fr}.fact-grid div{padding:17px 6px}
+  .overall-map-wrap{margin-top:36px;border-radius:22px}
+  .turkey-map svg{min-width:560px}
+  .day-tabs{position:sticky;top:0;z-index:10;background:var(--cream);margin-left:-20px;margin-right:-20px;padding:10px 20px 12px;scroll-snap-type:x mandatory}
+  .day-tab{min-width:82px;scroll-snap-align:start}
+  .day-jumps{position:sticky;top:78px;z-index:9;background:var(--cream);padding:5px 0 10px}
+  .day-map-card{margin-left:-4px;margin-right:-4px}
+  .region-map{height:315px;border-radius:18px}
+  .place-pin i{width:29px;height:29px;border-width:3px}
+  .place-pin b{font-size:9px;max-width:92px;white-space:normal;line-height:1.15}
+  .map-tip{font-size:9px}.locator{font-size:8px}
+  .day-head{padding:24px}.day-head h3{font-size:34px}
+  .timeline{padding:4px 18px 25px}.event{grid-template-columns:52px 18px 1fr;gap:8px}.event:before{left:61px}.event h4{font-size:17px}.event p{font-size:13px}
+  .restaurants{grid-template-columns:1fr}
+  .souvenir-grid{grid-template-columns:1fr 1fr;gap:9px}.souvenir-grid article{padding:16px}.souvenir-grid p{min-height:0}
+  .quick-grid{grid-template-columns:1fr 1fr;gap:9px}.quick-grid article{padding:17px}.quick-grid b{font-size:19px}
+  footer{padding-bottom:95px}
+}
+@media (max-width:420px){
+  .souvenir-grid,.quick-grid{grid-template-columns:1fr}
+  .fact-grid{grid-template-columns:1fr 1fr}
+  .region-map{height:300px}
+}
+/* Print/PDF: preserve visual identity while fitting A4 */
+@page{size:A4;margin:10mm}
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fbf8f1!important;color:#10212a!important;font-size:9.5pt}
+  body{padding:0!important}
+  .topbar,.hero-actions,.team-panel,.overlay,.day-tabs,.day-jumps,.mobile-nav,.print{display:none!important}
+  .hero{min-height:0!important;height:170mm!important;border-radius:0;background:radial-gradient(circle at 80% 25%,#d89a62 0 7%,transparent 7.2%),linear-gradient(135deg,#0d3947 0%,#126b82 42%,#d9b07a 100%)!important;break-after:page}
+  .hero-inner{margin:0!important;padding:35mm 15mm 0!important;max-width:none}.hero h1{font-size:78pt!important;line-height:.72!important}.lead{font-size:17pt!important}
+  .hero-meta span{border-color:rgba(255,255,255,.5)!important}
+  main section{max-width:none!important;padding:12mm 8mm!important}
+  .intro-grid{grid-template-columns:1.05fr 1fr!important;gap:10mm}.intro h2,.route h2,.days>h2,.guide h2,.souvenirs h2,.turkish h2{font-size:29pt!important}
+  .overall-map-wrap{grid-template-columns:55mm 1fr!important;padding:7mm!important;border-radius:5mm!important;background:#102b35!important;break-inside:avoid}
+  .turkey-map svg{min-width:0!important}
+  .history-story{grid-template-columns:repeat(3,1fr)!important;gap:3mm!important}.history-story article{padding:4mm!important;break-inside:avoid}
+  .route{background:#112b34!important;color:#fff!important;break-before:page;break-after:page}
+  .route-line{overflow:visible!important;gap:2mm!important}.route-line div{min-width:auto!important}
+  .days{padding-top:10mm!important}
+  #dayMap{break-inside:avoid}.day-map-card{background:#102b35!important;color:#fff!important;border-radius:5mm!important;padding:5mm!important}
+  .region-map{height:92mm!important;background:linear-gradient(145deg,#173c47,#0d2932)!important}.region-land{background:#eadfc9!important}
+  .place-pin b{font-size:7pt!important}.place-pin i{box-shadow:none!important}
+  .day-card{break-inside:auto!important;border-radius:5mm!important}.day-head{padding:6mm!important}.day-head h3{font-size:27pt!important}
+  .event{break-inside:avoid;padding:4mm 0!important}.restaurants{grid-template-columns:repeat(3,1fr)!important;gap:2mm!important}.restaurant{padding:3mm!important;break-inside:avoid}
+  .souvenirs{break-before:page}.souvenir-grid{grid-template-columns:repeat(3,1fr)!important;gap:3mm!important}.souvenir-grid article{break-inside:avoid;padding:5mm!important}
+  .guide{break-before:page}.tool-list details{break-inside:avoid}.tool-list details>div{display:block!important}
+  .turkish{break-before:page}.quick-grid{grid-template-columns:repeat(3,1fr)!important}.quick-grid article{background:#112b34!important;color:#fff!important;break-inside:avoid}
+  footer{padding:8mm!important}
+}
