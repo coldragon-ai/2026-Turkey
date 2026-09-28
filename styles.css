@@ -86,3 +86,5 @@
 @media print{.place-overlay,.place-sheet{display:none!important}.country-story{break-inside:avoid}}
 
 .souvenir-card{overflow:hidden;padding-top:0!important}.souvenir-photo{display:block;width:calc(100% + 44px);height:180px;object-fit:cover;margin:0 -22px 22px;border-bottom:1px solid var(--line)}@media(max-width:760px){.souvenir-photo{height:145px}}@media print{.souvenir-photo{height:38mm!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.souvenir-grid>article{padding:0!important;overflow:hidden}.souvenir-body{padding:20px 22px 22px}.souvenir-photo{display:block;width:100%!important;height:180px!important;object-fit:cover!important;margin:0!important;border:0!important;border-bottom:1px solid var(--line)!important}.souvenir-body .souvenir-icon{margin-bottom:10px}.souvenir-body h3{margin-top:0}@media(max-width:760px){.souvenir-photo{height:140px!important}.souvenir-body{padding:16px}}@media print{.souvenir-photo{height:38mm!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
