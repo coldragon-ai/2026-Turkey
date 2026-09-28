@@ -88,3 +88,24 @@
 .souvenir-card{overflow:hidden;padding-top:0!important}.souvenir-photo{display:block;width:calc(100% + 44px);height:180px;object-fit:cover;margin:0 -22px 22px;border-bottom:1px solid var(--line)}@media(max-width:760px){.souvenir-photo{height:145px}}@media print{.souvenir-photo{height:38mm!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
 .souvenir-grid>article{padding:0!important;overflow:hidden}.souvenir-body{padding:20px 22px 22px}.souvenir-photo{display:block;width:100%!important;height:180px!important;object-fit:cover!important;margin:0!important;border:0!important;border-bottom:1px solid var(--line)!important}.souvenir-body .souvenir-icon{margin-bottom:10px}.souvenir-body h3{margin-top:0}@media(max-width:760px){.souvenir-photo{height:140px!important}.souvenir-body{padding:16px}}@media print{.souvenir-photo{height:38mm!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* Souvenir cards — approved reference layout */
+.souvenir-grid{gap:14px}
+.souvenir-grid>article{border-radius:22px!important}
+.souvenir-photo{height:192px!important;object-fit:cover!important}
+.souvenir-body{padding:12px 20px 14px!important}
+.souvenir-body .souvenir-icon{display:inline-block;font-size:22px;margin:0 8px 0 0!important;vertical-align:middle}
+.souvenir-body h3{display:inline-block;margin:0!important;font-size:19px;vertical-align:middle}
+.souvenir-body p{margin:10px 0 8px;min-height:42px}
+.souvenir-body>span{display:block;margin:4px 0 10px}
+.souvenir-tags{display:flex;gap:6px;flex-wrap:wrap}
+.souvenir-tags i{font-style:normal;font-size:11px;font-weight:700;color:#536167;background:#f3eee5;border-radius:999px;padding:7px 12px;white-space:nowrap}
+@media(max-width:760px){
+ .souvenir-photo{height:150px!important}
+ .souvenir-body{padding:12px 14px 14px!important}
+ .souvenir-body h3{font-size:17px}
+ .souvenir-body p{font-size:12px}
+ .souvenir-tags i{font-size:10px;padding:6px 9px}
+}
+@media(max-width:420px){.souvenir-photo{height:190px!important}}
+@media print{.souvenir-photo{height:38mm!important}.souvenir-tags i{background:#f3eee5!important}}
