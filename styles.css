@@ -109,3 +109,24 @@
 }
 @media(max-width:420px){.souvenir-photo{height:190px!important}}
 @media print{.souvenir-photo{height:38mm!important}.souvenir-tags i{background:#f3eee5!important}}
+
+/* 2026-09-28 UI cleanup */
+.hero{min-height:76vh}
+.hero-inner{padding-top:4vh}
+.intro,.days,.souvenirs,.guide,.turkish{padding-top:82px;padding-bottom:82px}
+.country-story{margin-top:28px;padding:20px 22px}
+.country-story h3{font-family:inherit;font-size:16px;margin:0 0 14px}
+.fact-grid>div{box-shadow:none}
+.day-map-card,.day-card{box-shadow:none}
+.souvenir-grid>article{box-shadow:none}
+.tool-list details,.phrase-category{box-shadow:none}
+.souvenir-body>span{display:none!important}
+.phrase-category summary span{display:none}
+footer{padding-top:28px;padding-bottom:28px}
+@media(max-width:760px){
+ .hero{min-height:68svh}
+ .intro,.days,.souvenirs,.guide,.turkish{padding-top:58px;padding-bottom:58px}
+ .country-story{margin-top:20px;padding:18px}
+ .hero-actions{gap:8px}
+ .primary,.ghost{padding:11px 14px}
+}
